@@ -1,0 +1,29 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+    TextView text;
+    EditText teksti;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        text = findViewById(R.id.textView);
+        teksti = findViewById(R.id.editText);
+    }
+
+    public void testFunction(View v){
+        String s = "";
+        s += teksti.getText();
+        text.setText(s);
+
+    }
+}
