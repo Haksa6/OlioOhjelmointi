@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     TextView text;
-    SeekBar slider;
+    SeekBar seekbar;
     TextView text2;
     Spinner menu;
     ArrayAdapter<String> adapt;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text = (TextView) findViewById(R.id.textView);
-        slider = (SeekBar) findViewById(R.id.seekBar);
+        seekbar = (SeekBar) findViewById(R.id.seekBar);
         text2 = (TextView) findViewById(R.id.textView2);
         menu = (Spinner) findViewById(R.id.spinner);
         context = MainActivity.this;
@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void lisaaRaha(View v) {
-        int i = slider.getProgress();
+        int i = seekbar.getProgress();
         bottle.addMoney(text, i);
-        slider.setProgress(0);
+        seekbar.setProgress(0);
     }
 
     public void palautaRaha(View v) {
